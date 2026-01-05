@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavbarLink, navbarLinks } from './entities/entities';
 
 @Component({
   selector: 'app-navbar',
@@ -7,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.scss',
 })
 export class Navbar {
+
+  protected readonly navbarLinks: NavbarLink[] = navbarLinks;
 
 }

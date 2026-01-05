@@ -1,3 +1,24 @@
-<p>
-    <a href="#">Home</a>
-</p>
+<div class="navbar flex align-items-center flex-wrap">
+    <div class="navbar__logo flex align-items-center gap-3">
+        <img src="assets/logo.png" alt="logo" class="w-4rem h-4rem">
+        <h1 class="m-0">KnowVista</h1>
+    </div>
+    <div class="navbar__menu flex align-items-center">
+        <ul class="flex list-none gap-3 m-0 p-0 font-xlarge">
+            <li *ngFor="let link of navbarLinks" class="navbar__menu__item cursor-pointer">
+                <a [routerLink]="link.href" class="navbar__menu__item__link no-underline text-color hover:text-primary transition-colors transition-duration-150 font-xlarge">{{ link.label }}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="flex align-items-center gap-3 m-2">
+        <button class="navbar__menu__item__button  flex align-items-center gap-1">
+            <i class="pi pi-user"></i>
+            <span>Login</span>
+        </button>
+        <button class="navbar__menu__item__button  flex align-items-center gap-1">
+            <i class="pi pi-user"></i>
+            <span>Register</span>
+        </button>
+    </div>
+</div>
+
