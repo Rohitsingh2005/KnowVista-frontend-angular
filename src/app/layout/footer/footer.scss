@@ -1,0 +1,50 @@
+.footer {
+    background-color: #ababab;
+    font-family: serif;
+    font-weight: 500;
+  &__container {
+    width: 1200px;
+    &__left{
+        color: #fff;
+        &__description{
+            padding-left: 3rem;
+            color: #000;
+        }
+    }
+    &__right {
+      &__list {
+        &__item {
+            a{
+                text-decoration: none;
+                color: black;
+                padding: 0.5rem 1rem;
+                border-radius: 0.25rem;
+                transition: background-color 0.3s ease;
+                display: inline-block;
+            }
+            a.active,
+            a:active{
+                background-color: #f10303;
+                color: #ffff;
+            }
+        }
+      }
+    }
+    &__social {
+      &__icons {
+        a {
+          color: rgb(255, 255, 255);
+          text-decoration: none;
+          transition: opacity 0.3s ease;
+          &:hover {
+            opacity: 0.7;
+            background-color: none;
+            color: #f10303;
+            
+          }
+        }
+      }
+    }
+  }
+}
+

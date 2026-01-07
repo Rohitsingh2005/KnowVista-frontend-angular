@@ -14,7 +14,14 @@
             gap: 1rem;
             &__link {
                 text-decoration: none;
-              
+                padding: 0.5rem 1rem;
+                border-radius: 0.25rem;
+                transition: background-color 0.3s ease;
+                &.active,
+                &:active {
+                    background-color: #f10303;
+                    color: #ffff;
+                }
             }
             &__button {
                 background-color: #ffff;

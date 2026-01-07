@@ -6,7 +6,7 @@
     <div class="navbar__menu flex align-items-center">
         <ul class="flex list-none gap-3 m-0 p-0 font-xlarge">
             <li *ngFor="let link of navbarLinks" class="navbar__menu__item cursor-pointer">
-                <a [href]="link.href" class="navbar__menu__item__link no-underline text-color hover:text-primary transition-colors transition-duration-150 font-xlarge">{{ link.label }}</a>
+                <a [routerLink]="link.href" routerLinkActive="active" [routerLinkActiveOptions]="{exact: link.href === '/'}" class="navbar__menu__item__link no-underline text-color hover:text-primary transition-colors transition-duration-150 font-xlarge">{{ link.label }}</a>
             </li>
         </ul>
     </div>

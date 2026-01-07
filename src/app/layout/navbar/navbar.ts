@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavbarLink, navbarLinks } from './entities/entities';
+import { NavbarLink, navbarLinks } from '../../shared/entities/entities';
 
 @Component({
   selector: 'app-navbar',
