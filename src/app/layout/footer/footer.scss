@@ -1,5 +1,5 @@
 .footer {
-    background-color: #ababab;
+    background-color: #363636;
     font-family: serif;
     font-weight: 500;
   &__container {
@@ -8,15 +8,17 @@
         color: #fff;
         &__description{
             padding-left: 3rem;
-            color: #000;
+            font-size: larger;
+            font-style: italic;
         }
     }
     &__right {
+        color: #fff;
       &__list {
         &__item {
             a{
                 text-decoration: none;
-                color: black;
+                color: rgb(255, 255, 255);
                 padding: 0.5rem 1rem;
                 border-radius: 0.25rem;
                 transition: background-color 0.3s ease;
@@ -24,27 +26,45 @@
             }
             a.active,
             a:active{
-                background-color: #f10303;
+                background-color: #e67e22;
                 color: #ffff;
+            }
+            :hover{
+                opacity: 0.9;
+                background-color: none;
+                transform: translateY(-5px) scale(1.1);
             }
         }
       }
     }
     &__social {
+        color: #fff;
+        &__contact{
+            color: #000;
+
+            &__detail{
+                color: #fff;
+            }
+        }
       &__icons {
         a {
           color: rgb(255, 255, 255);
           text-decoration: none;
-          transition: opacity 0.3s ease;
+          transition: all 0.3s ease;
+          display: inline-block;
           &:hover {
-            opacity: 0.7;
+            opacity: 0.9;
             background-color: none;
-            color: #f10303;
-            
+            color: #e67e22;
+            transform: translateY(-5px) scale(1.1);
           }
         }
       }
     }
   }
+  &__rights{
+    color: #ffff;
+    background-color: #131212;
+}
 }
 
