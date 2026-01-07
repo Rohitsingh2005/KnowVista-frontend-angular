@@ -4,6 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { Home } from './home';
 import { Navbar } from '../../layout/navbar/navbar';
 import { Footer } from '../../layout/footer/footer';
+import { Board } from "../board/board";
+import { Teams } from '../teams/teams';
 
 const routes: Routes = [
   {
@@ -16,11 +18,13 @@ const routes: Routes = [
   declarations: [
     Home,
     Navbar,
-    Footer
+    Footer,
+    Board,
+    Teams
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
-  ]
+    RouterModule.forChild(routes),
+]
 })
 export class HomeModule { }

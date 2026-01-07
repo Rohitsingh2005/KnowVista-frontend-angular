@@ -1,0 +1,17 @@
+.teams{
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), 
+                0 4px 8px rgba(0, 0, 0, 0.1),
+                0 0 0 1px rgba(219, 217, 215, 0.2);
+    
+    &__title{
+        padding-left: 1rem;
+        font-size: 24px;
+
+        &__sort{
+            width: 0.75rem;
+            height: 2rem;
+            background-color: #e67e22;
+        
+        }
+    }
+}

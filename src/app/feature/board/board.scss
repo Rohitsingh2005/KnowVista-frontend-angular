@@ -1,0 +1,14 @@
+.board{
+    width: 1400px;
+    &__details{
+        &__description{
+            width: 60%;
+            padding-left: 2rem;
+            padding-top:1rem;
+            padding-bottom: 0.5rem;
+            text-align: left;
+            font-size: large;
+            line-height: 1.4;
+        }
+    }
+}
