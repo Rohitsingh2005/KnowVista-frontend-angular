@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { teamCards } from './entities/entities';
 
 @Component({
   selector: 'app-teams',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   standalone:false
 })
 export class Teams {
-
+  protected readonly cards = teamCards;
 }

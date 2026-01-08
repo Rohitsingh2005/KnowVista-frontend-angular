@@ -3,4 +3,18 @@
         <div class="teams__title__sort"></div>
         <h2>Collaborations</h2>
     </div>
+    <div class="teams__card-container flex flex-wrap gap-4">
+        <div class="teams__card-container__card" *ngFor="let card of cards">
+            <div class="teams__card-container__card__image">
+                <img [src]="card.image" [alt]="card.title">
+            </div>
+            <div class="teams__card-container__card__content">
+                <h3 class="teams__card-container__card__content__title text-center">{{ card.title }}</h3>
+                <p class="teams__card-container__card__content__description">{{ card.description }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="teams__btn flex justify-content-center align-items-center mt-4">
+        <button class="p-3 m-0 text-xl ">Show Or Collaborate</button>
+    </div>
 </div>

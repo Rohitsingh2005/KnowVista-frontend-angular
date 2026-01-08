@@ -1,0 +1,26 @@
+<div class="community flex flex-column">
+    <div class="community__title flex align-items-center gap-4">
+        <div class="community__title__sort"></div>
+        <h1>Community</h1>
+    </div>
+    <div class="community__teams flex flex-column gap-4">
+        <div class="community__teams__section" *ngFor="let team of teams">
+            <div class="community__teams__section__header flex align-items-center justify-content-between">
+                <div class="community__teams__section__header__info flex align-items-center gap-3">
+                    <h2 class="community__teams__section__header__info__name">{{ team.communityName }}</h2>
+                    <span class="community__teams__section__header__info__peoples">{{ team.peoples }} Peoples</span>
+                </div>
+            </div>
+            <p class="community__teams__section__description">{{ team.description }}</p>
+            <div class="community__teams__section__discussions">
+                <h3 class="community__teams__section__discussions__title">Recent Discussions</h3>
+                <div class="community__teams__section__discussions__list flex flex-column gap-2">
+                    <div class="community__teams__section__discussions__list__item" *ngFor="let discussion of team.discussions">
+                        <span class="community__teams__section__discussions__list__item__topic">{{ discussion.topic }}</span>
+                        <span class="community__teams__section__discussions__list__item__replies">{{ discussion.replies }} replies</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
