@@ -7,6 +7,9 @@ import { Footer } from '../../layout/footer/footer';
 import { Board } from "../board/board";
 import { Teams } from '../teams/teams';
 import { Community } from '../community/community';
+import { MeetUp } from '../meet-up/meet-up';
+import { Contact } from '../contact/contact';
+
 
 const routes: Routes = [
   {
@@ -17,16 +20,12 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    Home,
-    Navbar,
-    Footer,
-    Board,
-    Teams,
-    Community
+    Home,Navbar, Footer,Board,Teams,
+    Community, MeetUp, Contact
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-]
+  ]
 })
 export class HomeModule { }

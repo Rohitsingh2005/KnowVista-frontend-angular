@@ -1,0 +1,18 @@
+<div class="meetups">
+    <div class="meetups__title flex align-items-center gap-4">
+        <div class="meetups__title__sort"></div>
+        <h2>Recent Collaborations</h2>
+    </div>
+    <div class="meetups__card-container flex flex-wrap gap-4">
+        <div class="meetups__card-container__card" *ngFor="let card of cards">
+            <div class="meetups__card-container__card__image">
+                <img [src]="card.image" [alt]="card.title">
+            </div>
+            <div class="meetups__card-container__card__content">
+                <h3 class="meetups__card-container__card__content__title text-center">{{ card.title }}</h3>
+                <h4  class="meetups__card-container__card__content__title text-center ">{{card.Location}}|{{card.DateTime}}</h4>
+                <p class="meetups__card-container__card__content__description">{{ card.description }}</p>
+            </div>
+        </div>
+    </div>
+</div>
