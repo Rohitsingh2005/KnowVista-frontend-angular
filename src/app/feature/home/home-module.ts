@@ -7,6 +7,7 @@ import { Footer } from '../../layout/footer/footer';
 import { Board } from "../board/board";
 import { Teams } from '../teams/teams';
 import { Community } from '../community/community';
+import { MeetUp } from '../meet-up/meet-up';
 
 const routes: Routes = [
   {
@@ -22,7 +23,8 @@ const routes: Routes = [
     Footer,
     Board,
     Teams,
-    Community
+    Community,
+    MeetUp
   ],
   imports: [
     CommonModule,
