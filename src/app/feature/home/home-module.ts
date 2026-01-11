@@ -9,6 +9,7 @@ import { Teams } from '../teams/teams';
 import { Community } from '../community/community';
 import { MeetUp } from '../meet-up/meet-up';
 import { Contact } from '../contact/contact';
+import { RightRules } from '../right-rules/right-rules';
 
 
 const routes: Routes = [
@@ -21,7 +22,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     Home,Navbar, Footer,Board,Teams,
-    Community, MeetUp, Contact
+    Community, MeetUp, Contact,RightRules
   ],
   imports: [
     CommonModule,

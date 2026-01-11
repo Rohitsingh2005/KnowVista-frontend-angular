@@ -1,0 +1,59 @@
+.rules {
+    width: 100%;
+    margin: auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+  }
+  
+  .rules__title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 2rem;
+  }
+  
+  .rules__icon {
+    margin-right: 8px;
+  }
+  
+  .rules__section {
+    margin-bottom: 2rem;
+    padding: 1.2rem;
+    border-radius: 10px;
+  }
+  
+  .rules__section h2 {
+    color: #000000;
+    margin-bottom: 10px;
+  }
+  
+  .rules__section-icon {
+    margin-right: 6px;
+  }
+  
+  .rules__section ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .rules__section li {
+    margin-bottom: 10px;
+    color: #374151;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .rules__section li i {
+    color: #e67e22;
+  }
+  
+  .rules__footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e67e22;
+    color: #e67e22;
+    font-weight: 600;
+  }
+  
