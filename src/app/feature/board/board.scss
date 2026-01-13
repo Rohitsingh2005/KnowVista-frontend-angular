@@ -1,5 +1,4 @@
 .board{
-    width: 1400px;
     &__details{
         &__description{
             width: 60%;
@@ -9,6 +8,12 @@
             text-align: left;
             font-size: larger;
             line-height: 1.4;
+        }
+    }
+    &__image{
+        
+        img{
+            width: 32rem;
         }
     }
 }
