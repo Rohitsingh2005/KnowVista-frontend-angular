@@ -1,6 +1,6 @@
-<div class="board flex justify-content-center ">
-    <div class="board__details  flex gap-2 flex-column">
-        <div class="board__details__title flex align-items-center pl-1">
+<div class="board">
+    <div class="board__details">
+        <div class="board__details__title flex align-items-center gap-2">
             <img src="assets/logo.png" alt="" class="w-10rem h-10rem">
             <div class="p-0 m-0">
                 <h1 class="p-0 m-0">KnowVista</h1>
@@ -10,7 +10,7 @@
         <div class="board__details__description" *ngFor="let description of descriptions" [innerHTML]="description.text">
         </div>
     </div>
-    <div class="board__image pt-4">
-        <img src="assets/team.png" alt="">
+    <div class="board__image">
+        <img src="assets/team.png" alt="Team">
     </div>
 </div>
