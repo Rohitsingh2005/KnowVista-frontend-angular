@@ -1,10 +1,13 @@
 .meetups {
-
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15),
         0 4px 8px rgba(0, 0, 0, 0.1),
         0 0 0 1px rgba(219, 217, 215, 0.2),
         0 0 12px 16px rgba(219, 217, 215, 0.2);
     padding: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
 
     &__title {
         padding-left: 1rem;

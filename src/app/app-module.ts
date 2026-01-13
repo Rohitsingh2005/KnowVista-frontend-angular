@@ -5,6 +5,7 @@ import { App } from './app';
 import { Login } from './pages/login/login';
 import { Register } from './pages/register/register';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { CommonModule } from '@angular/common';
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    
+    ReactiveFormsModule,
    ],
   providers: [
     provideBrowserGlobalErrorListeners(),

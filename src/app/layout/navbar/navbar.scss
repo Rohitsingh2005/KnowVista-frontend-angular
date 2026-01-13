@@ -5,6 +5,10 @@
     background-color: #363636;
     color: #ffff;
     font-weight: bold;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
     &__menu {
         display: flex;
         flex-direction: row;

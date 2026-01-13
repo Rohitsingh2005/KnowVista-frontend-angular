@@ -1,1 +1,153 @@
-<p>register works!</p>
+<div class="register flex flex-column justify-content-center align-items-center">
+    <div class="register__container">
+        <div class="register__header flex flex-column align-items-center">
+            <img src="assets/logo.png" alt="KnowVista" class="register__header__image" />
+            <h1 class="register__header__title">KnowVista</h1>
+            <p class="register__header__subtitle">Create your account and join us today!</p>
+        </div>
+        
+        <div class="register__form">
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" novalidate>
+                <div class="register__form__group">
+                    <div class="register__form__input-wrapper">
+                        <i class="pi pi-user register__form__icon register__form__icon--left"></i>
+                        <input 
+                            type="text" 
+                            formControlName="name"
+                            placeholder="Enter Your Full Name"
+                            class="register__form__input"
+                            [class.register__form__input--error]="name?.invalid && name?.touched"
+                            autocomplete="name"
+                        />
+                    </div>
+                    <div class="register__form__error" *ngIf="name?.invalid && name?.touched">
+                        <span *ngIf="name?.errors?.['required']">Name is required</span>
+                        <span *ngIf="name?.errors?.['minlength']">Name must be at least 2 characters</span>
+                    </div>
+                </div>
+
+                <div class="register__form__group">
+                    <div class="register__form__input-wrapper">
+                        <i class="pi pi-phone register__form__icon register__form__icon--left"></i>
+                        <input 
+                            type="tel" 
+                            formControlName="mobile"
+                            placeholder="Enter Your Mobile Number"
+                            class="register__form__input"
+                            [class.register__form__input--error]="mobile?.invalid && mobile?.touched"
+                            autocomplete="tel"
+                            maxlength="10"
+                        />
+                    </div>
+                    <div class="register__form__error" *ngIf="mobile?.invalid && mobile?.touched">
+                        <span *ngIf="mobile?.errors?.['required']">Mobile number is required</span>
+                        <span *ngIf="mobile?.errors?.['pattern']">Please enter a valid 10-digit mobile number</span>
+                    </div>
+                </div>
+                <div class="register__form__group">
+                    <div class="register__form__input-wrapper">
+                        <i class="pi pi-envelope register__form__icon register__form__icon--left"></i>
+                        <input 
+                            type="email" 
+                            formControlName="email"
+                            placeholder="Enter Your Email"
+                            class="register__form__input"
+                            [class.register__form__input--error]="email?.invalid && email?.touched"
+                            autocomplete="email"
+                        />
+                    </div>
+                    <div class="register__form__error" *ngIf="email?.invalid && email?.touched">
+                        <span *ngIf="email?.errors?.['required']">Email is required</span>
+                        <span *ngIf="email?.errors?.['email']">Please enter a valid email address</span>
+                    </div>
+                </div>
+
+                <div class="register__form__group">
+                    <div class="register__form__input-wrapper">
+                        <i class="pi pi-users register__form__icon register__form__icon--left"></i>
+                        <select 
+                            formControlName="gender"
+                            class="register__form__input register__form__select"
+                            [class.register__form__input--error]="gender?.invalid && gender?.touched"
+                        >
+                            <option value="" disabled>Select Gender</option>
+                            <option *ngFor="let option of genderOptions" [value]="option.value">
+                                {{ option.label }}
+                            </option>
+                        </select>
+                    </div>
+                    <div class="register__form__error" *ngIf="gender?.invalid && gender?.touched">
+                        <span *ngIf="gender?.errors?.['required']">Gender is required</span>
+                    </div>
+                </div>
+
+                <div class="register__form__group">
+                    <div class="register__form__input-wrapper">
+                        <i class="pi pi-map-marker register__form__icon register__form__icon--left"></i>
+                        <textarea 
+                            formControlName="address"
+                            placeholder="Enter Your Address"
+                            class="register__form__input register__form__textarea"
+                            [class.register__form__input--error]="address?.invalid && address?.touched"
+                            rows="3"
+                            autocomplete="street-address"
+                        ></textarea>
+                    </div>
+                    <div class="register__form__error" *ngIf="address?.invalid && address?.touched">
+                        <span *ngIf="address?.errors?.['required']">Address is required</span>
+                        <span *ngIf="address?.errors?.['minlength']">Address must be at least 10 characters</span>
+                    </div>
+                </div>
+
+
+                <div class="register__form__group">
+                    <div class="register__form__input-wrapper">
+                        <i class="pi pi-lock register__form__icon register__form__icon--left"></i>
+                        <input 
+                            [type]="showPassword ? 'text' : 'password'"
+                            formControlName="password"
+                            placeholder="Enter Your Password"
+                            class="register__form__input"
+                            [class.register__form__input--error]="password?.invalid && password?.touched"
+                            autocomplete="new-password"
+                        />
+                        <i 
+                            [class]="showPassword ? 'pi pi-eye register__form__icon register__form__icon--right' : 'pi pi-eye-slash register__form__icon register__form__icon--right'"
+                            (click)="togglePasswordVisibility()"
+                            role="button"
+                            tabindex="0"
+                            (keydown.enter)="togglePasswordVisibility()"
+                        ></i>
+                    </div>
+                    <div class="register__form__error" *ngIf="password?.invalid && password?.touched">
+                        <span *ngIf="password?.errors?.['required']">Password is required</span>
+                        <span *ngIf="password?.errors?.['minlength']">Password must be at least 6 characters</span>
+                    </div>
+                </div>
+
+                <div class="register__form__actions">
+                    <button 
+                        type="submit" 
+                        class="register__form__button register__form__button--primary"
+                        [disabled]="isLoading || registerForm.invalid"
+                    >
+                        <span *ngIf="!isLoading">Register</span>
+                        <span *ngIf="isLoading" class="register__form__button__loading">
+                            <i class="pi pi-spin pi-spinner"></i>
+                            Registering...
+                        </span>
+                    </button>
+                    <button 
+                        type="button" 
+                        class="register__form__button register__form__button--secondary"
+                        (click)="onReset()"
+                        [disabled]="isLoading"
+                    >
+                        Reset
+                    </button>
+                </div>
+            </form>
+            <p>Already registered , <span routerLink="/login" class="cursor-pointer">Click here to Login</span></p>
+        </div>
+    </div>
+</div>

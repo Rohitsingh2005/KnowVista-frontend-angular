@@ -1,19 +1,52 @@
 .board{
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    
     &__details{
+        flex: 1;
+        min-width: 300px;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        
+        &__title{
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        
         &__description{
-            width: 60%;
-            padding-left: 2rem;
-            padding-top:1rem;
-            padding-bottom: 0.5rem;
+            width: 100%;
+            max-width: 100%;
+            padding: 1rem 0;
             text-align: left;
             font-size: larger;
-            line-height: 1.4;
+            line-height: 1.6;
+            box-sizing: border-box;
         }
     }
     &__image{
+        flex: 1;
+        min-width: 300px;
+        max-width: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         
         img{
-            width: 32rem;
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            object-fit: contain;
         }
     }
 }
